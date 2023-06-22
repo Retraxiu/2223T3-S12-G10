@@ -137,6 +137,11 @@ function handleDelete (e) {
 
     //change it
     deleteComment.innerHTML = "This comment has been deleted.";
+
+    console.log($(e.target).closest('create-reply'));
+    //remove all the other html stuff
+    parentComment.querySelector('.edit-reply').remove();
+    
 }
 
 function createReply(parentComment, replyid) {
